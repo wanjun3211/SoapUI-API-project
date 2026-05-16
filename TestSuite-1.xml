@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="8d817291-015c-4700-bc5d-dd010e727d9c" name="TestSuite 1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="dd65ac12-3999-4ba1-aa72-a4f82953af3b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="End to end test" searchProperties="true"><con:settings/><con:testStep type="properties" name="testStepProperty" id="a7350b4b-79db-4274-af61-970b3532ddd1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>a</con:name><con:value>23</con:value></con:property><con:property><con:name>b</con:name><con:value>23</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="Add" id="44d5684f-0324-45ac-b329-f58afb8d12d0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Add</con:operation><con:request name="Add" id="0c3ad184-fcf0-4821-8a48-18fce02bbff5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Add>
+         <tem:intA>${testStepProperty#a}</tem:intA>
+         <tem:intB>${testStepProperty#b}</tem:intB>
+      </tem:Add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="805f2564-3125-4fd4-91ef-cb9fcc88ef34"/><con:assertion type="Simple NotContains" id="87fc990e-0fd3-4166-924a-c58072f11e68" name="Not Contains intA"><con:configuration><token>intA</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="14a4b1a8-8fab-4fd8-b51b-322a2711563c" name="XPath Match 1"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://tempuri.org/';
+
+//ns1:AddResult</path><content>46</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="4ce591e2-69f3-4aca-a127-dfcd377207e4" name="Script Assertion 46 contained"><con:configuration><scriptText>//Define Groovy Utils and holder for validating the XML reponse content
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def holder = groovyUtils.getXmlHolder(messageExchange.responseContent)
+
+//Define the NameSpace
+holder.namespaces["ns1"] = "http://tempuri.org/"
+
+//Get the Value of the Node 'AddResult' and assign to a variable
+def addResult = holder.getNodeValue("//ns1:AddResult")
+
+//print the value of the result in the Output panel
+log.info "The result value for integers is " + addResult
+
+//Comparing the value to print 'Pass' or 'Fail'
+if(addResult=="46")
+{ log.info "Pass" }
+else
+{ log.info "fail"}</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="7ca4ebc5-0523-493b-a19e-878c4fb5ff8f" name="Contains 46"><con:configuration><token>46</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer(add to multiply)" id="9ebd216d-f935-465a-a35e-2e848237406c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="false" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>Transfer Add resutl</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Add</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/';
+
+//ns1:AddResponse/ns1:AddResult/text()
+</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Multiply</con:targetStep><con:targetPath>declare namespace tem = "http://tempuri.org/";
+
+//tem:Multiply/tem:intA
+
+
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Multiply" id="f08bd00d-b2e5-4d09-86fa-93ac1b5ab0a2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Multiply</con:operation><con:request name="Multiply" id="38150890-bf4c-4847-ad3a-1275cb1c81a9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Multiply>
+         <tem:intA>46</tem:intA>
+         <tem:intB>${testStepProperty#b}</tem:intB>
+      </tem:Multiply>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c02aefe2-555b-4d3f-aeb0-a642960f729f"/><con:assertion type="Simple Contains" id="1ffee2dc-5f41-40bb-a0f5-c68de8e4582f" name="Contains 1058"><con:configuration><token>1058</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>a</con:name><con:value>10</con:value></con:property><con:property><con:name>b</con:name><con:value>11</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>a</con:name><con:value>5</con:value></con:property><con:property><con:name>b</con:name><con:value>7</con:value></con:property></con:properties></con:testSuite>
