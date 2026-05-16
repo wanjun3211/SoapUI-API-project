@@ -9,6 +9,8 @@ Test case name is End to end test.
 Four test steps:    
   1. testStepProperty: varible a = 23, and b =23. They are both test step property.
   2. Add: this step including five assertions inside
+  3. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
+  4. 
 
 >> testing
 
