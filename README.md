@@ -29,12 +29,4 @@ Four test steps:
 
 
     
-## Using **Runner** to automate this collection
 
-The photo is a screenshot that shows this collection result. And there is one fialed API request due to repetitive registration of client.
-
-<img width="1234" height="823" alt="image" src="https://github.com/user-attachments/assets/9672aa1c-4d28-48e8-947a-aac42819288f" />
-
-## Other feature of this API testing 
-
-The base API address and book ID has been stored in the varible.
