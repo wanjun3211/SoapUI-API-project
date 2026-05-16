@@ -4,10 +4,8 @@
 This project is about using SoapUI to test a calculator API. One test suit together with one test case was created. Test steps are including setting test step properties, creating Add step, Property Transfer and the final step called Multiply, wihch would use the result from Add step.  
 
 ## Project structure
-Test suite called TestSuite 1.
-
-Test case name is End to end test.
-
+Test suite called TestSuite 1.   
+Test case name is End to end test.  
 Four test steps: 
 
 >> testing
