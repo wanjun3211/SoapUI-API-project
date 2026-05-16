@@ -11,7 +11,8 @@ Four test steps:
      
      ![test property](/images/testStepProperty.png "Property pic")
      
-  3. Add: this step including five assertions inside. The request is using step level property, by ${testStepProperty#a} and ${testStepProperty#b}
+  3. Add: this step including five assertions inside. The request is using step level property, by ${testStepProperty#a} and ${testStepProperty#b}.
+     For the five assertions, they can be told by their names for their purpose of expectation.
      
      ![Add step](/images/Add.png "Add pic")
      
