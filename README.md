@@ -25,6 +25,7 @@ Four test steps:
      
   7. Muliply step is the final test step, which will use the reslut from previous step
 
+    ![Property transfer](/images/PropertyTransfer.png "Property transfer pic")
 
 
     
