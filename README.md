@@ -4,6 +4,9 @@
 This project is about using SoapUI to test a calculator API. One test suit together with one test case was created. Test steps are including setting test step properties, creating Add step, Property Transfer and the final step called Multiply, wihch would use the result from Add step.  
 
 ## Project structure
+
+![Project stucture](/images/SOAPUItestStructure.png "Structure pic")
+
 Test suite called TestSuite 1.   
 Test case name is End to end test.  
 Four test steps:    
@@ -22,9 +25,7 @@ Four test steps:
      
   7. Muliply step is the final test step, which will use the reslut from previous step
 
->> testing
 
-![Project stucture](/images/SOAPUItestStructure.png "Structure pic")
 
     
 ## Using **Runner** to automate this collection
