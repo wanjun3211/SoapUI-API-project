@@ -17,7 +17,8 @@ Four test steps:
      ![Add step](/images/Add.png "Add pic")
      
   5. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
-  6. Muliply step is the final test step, which will use the reslut from previous step
+     
+  7. Muliply step is the final test step, which will use the reslut from previous step
 
 >> testing
 
