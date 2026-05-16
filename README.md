@@ -8,9 +8,10 @@ Test suite called TestSuite 1.
 Test case name is End to end test.  
 Four test steps:    
   1. testStepProperty: varible a = 23, and b =23. They are both test step level property.
-  2. Add: this step including five assertions inside. The request is using step level property
-  3. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
-  4. Muliply step is the final test step, which will use the reslut from previous step
+     ![test property](/images/SOAPUItestStructure.png "Structure pic")
+  3. Add: this step including five assertions inside. The request is using step level property
+  4. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
+  5. Muliply step is the final test step, which will use the reslut from previous step
 
 >> testing
 
