@@ -25,7 +25,7 @@ Four test steps:
      
   7. Muliply step is the final test step, which will use the reslut from previous step
 
-    ![Multiply](/images/Multiply.png "Multiply pic")
+      ![Multiply](/images/Multiply.png "Multiply pic")
 
 
     
