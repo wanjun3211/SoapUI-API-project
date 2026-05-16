@@ -5,7 +5,9 @@ This project is about using SoapUI to test a calculator API. One test suit toget
 
 ## Project structure
 Test suite called TestSuite 1.
+
 Test case name is Ent to end test.
+
 Four test steps: 
 
 ![Project stucture](/images/SOAPUItestStructure.png "Structure pic")
