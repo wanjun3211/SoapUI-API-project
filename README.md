@@ -10,7 +10,7 @@ Four test steps:
   1. testStepProperty: varible a = 23, and b =23. They are both test step level property.
      ![test property](/images/testStepProperty.png "Property pic")
   3. Add: this step including five assertions inside. The request is using step level property
-     
+     ![Add step](/images/Add.png "Add pic")
   5. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
   6. Muliply step is the final test step, which will use the reslut from previous step
 
