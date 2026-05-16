@@ -6,7 +6,9 @@ This project is about using SoapUI to test a calculator API. One test suit toget
 ## Project structure
 Test suite called TestSuite 1.   
 Test case name is End to end test.  
-Four test steps: 
+Four test steps:    
+  1. testStepProperty: varible a = 23, and b =23. They are both test step property.
+  2. Add: this step including five assertions inside
 
 >> testing
 
