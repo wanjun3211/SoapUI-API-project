@@ -7,11 +7,11 @@ This project is about using SoapUI to test a calculator API. One test suit toget
 Test suite called TestSuite 1.   
 Test case name is End to end test.  
 Four test steps:    
-  1. testStepProperty: varible a = 23, and b =23. They are both test step level property, by ${testStepProperty#a} and ${testStepProperty#b}
+  1. testStepProperty: varible a = 23, and b =23. They are both test step level property
      
      ![test property](/images/testStepProperty.png "Property pic")
      
-  3. Add: this step including five assertions inside. The request is using step level property
+  3. Add: this step including five assertions inside. The request is using step level property, by ${testStepProperty#a} and ${testStepProperty#b}
      
      ![Add step](/images/Add.png "Add pic")
      
