@@ -10,6 +10,8 @@ Test case name is End to end test.
 
 Four test steps: 
 
+>> testing
+
 ![Project stucture](/images/SOAPUItestStructure.png "Structure pic")
 
     
