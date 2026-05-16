@@ -19,7 +19,7 @@ Four test steps:
      
      ![Add step](/images/Add.png "Add pic")
      
-  5. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request
+  5. Property Transfer(add to multiply): it is used to get the result of response from Add step, and used later for Multiply step for request. Name space is required to get result as well as apply corresponding location in the Target step
 
      ![Property transfer](/images/PropertyTransfer.png "Property transfer pic")
      
