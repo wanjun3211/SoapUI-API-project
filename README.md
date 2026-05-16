@@ -7,7 +7,7 @@ This project is about using SoapUI to test a calculator API. One test suit toget
 Test suite called TestSuite 1.   
 Test case name is End to end test.  
 Four test steps:    
-  1. testStepProperty: varible a = 23, and b =23. They are both test step level property.
+  1. testStepProperty: varible a = 23, and b =23. They are both test step level property, by ${testStepProperty#a} and ${testStepProperty#b}
      
      ![test property](/images/testStepProperty.png "Property pic")
      
